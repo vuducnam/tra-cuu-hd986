@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Tra cứu HD986 — HVCTQGHCM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --red: #B01228;
+      --red-soft: #f3dfe2;
+      --ink: #1c1a17;
+      --ink-2: #55504a;
+      --paper: #faf6ef;
+      --card: #ffffff;
+      --line: #e7e0d4;
+      --gold: #9a7b2e;
+      --shadow: 0 1px 2px rgba(28, 26, 23, .06), 0 8px 24px -12px rgba(28, 26, 23, .18);
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0
+    }
+
+    body {
+      font-family: "Be Vietnam Pro", "Segoe UI", Tahoma, Arial, sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.5;
+      font-size: 16px;
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    .wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 14px 64px
+    }
+
+    /* ===== Header ===== */
+    header.top {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: linear-gradient(180deg, var(--paper) 70%, rgba(250, 246, 239, .0));
+      padding-top: env(safe-area-inset-top);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 14px 10px;
+      max-width: 760px;
+      margin: 0 auto
+    }
+
+    .brand .star {
+      width: 34px;
+      height: 34px;
+      flex: none;
+      border-radius: 8px;
+      background: var(--red);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+      box-shadow: var(--shadow)
+    }
+
+    .brand h1 {
+      font-family: "Be Vietnam Pro", sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      margin: 0;
+      letter-spacing: .2px
+    }
+
+    .brand p {
+      margin: 0;
+      font-size: 11.5px;
+      color: var(--ink-2);
+      font-weight: 500
+    }
+
+    .searchbox {
+      padding: 0 14px 8px;
+      max-width: 760px;
+      margin: 0 auto
+    }
+
+    .searchbox .field {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--card);
+      border: 1.5px solid var(--line);
+      border-radius: 13px;
+      padding: 11px 13px;
+      box-shadow: var(--shadow)
+    }
+
+    .searchbox input {
+      border: 0;
+      outline: 0;
+      width: 100%;
+      font: inherit;
+      font-size: 16px;
+      background: transparent;
+      color: var(--ink)
+    }
+
+    .searchbox svg {
+      flex: none;
+      color: var(--ink-2)
+    }
+
+    .clearbtn {
+      border: 0;
+      background: var(--line);
+      color: var(--ink-2);
+      border-radius: 50%;
+      width: 22px;
+      height: 22px;
+      font-size: 14px;
+      line-height: 1;
+      cursor: pointer;
+      flex: none;
+      display: none
+    }
+
+    .clearbtn.show {
+      display: block
+    }
+
+    /* ===== Tabs ===== */
+    .tabs {
+      display: flex;
+      gap: 6px;
+      padding: 4px 14px 10px;
+      max-width: 760px;
+      margin: 0 auto;
+      overflow-x: auto;
+      scrollbar-width: none
+    }
+
+    .tabs::-webkit-scrollbar {
+      display: none
+    }
+
+    .tab {
+      flex: none;
+      border: 1.5px solid var(--line);
+      background: var(--card);
+      color: var(--ink-2);
+      padding: 8px 14px;
+      border-radius: 20px;
+      font: inherit;
+      font-size: 13.5px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: .15s
+    }
+
+    .tab.active {
+      background: var(--red);
+      color: #fff;
+      border-color: var(--red)
+    }
+
+    /* ===== Content ===== */
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 4px 0 14px
+    }
+
+    .chip {
+      font-size: 11.5px;
+      font-weight: 600;
+      background: var(--red-soft);
+      color: var(--red);
+      padding: 4px 10px;
+      border-radius: 999px
+    }
+
+    .chip.gray {
+      background: #eee9df;
+      color: var(--ink-2)
+    }
+
+    .grouphead {
+      font-family: "Be Vietnam Pro", sans-serif;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin: 22px 2px 9px
+    }
+
+    .grouphead:first-of-type {
+      margin-top: 6px
+    }
+
+    .card {
+      background: var(--card);
+      border: 1.5px solid var(--line);
+      border-radius: 14px;
+      margin-bottom: 9px;
+      overflow: hidden;
+      box-shadow: var(--shadow)
+    }
+
+    .card>button.head {
+      width: 100%;
+      border: 0;
+      background: transparent;
+      text-align: left;
+      cursor: pointer;
+      padding: 13px 15px;
+      display: flex;
+      gap: 11px;
+      align-items: flex-start;
+      font: inherit
+    }
+
+    .num {
+      font-family: "Be Vietnam Pro", sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--red);
+      flex: none;
+      min-width: 20px;
+      line-height: 1.45
+    }
+
+    .htext {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 5px
+    }
+
+    .htext .t {
+      font-weight: 600;
+      font-size: 15px;
+      color: var(--ink);
+      line-height: 1.35
+    }
+
+    .htext .s {
+      font-size: 13px;
+      color: var(--ink-2);
+      line-height: 1.4
+    }
+
+    .chev {
+      flex: none;
+      color: var(--ink-2);
+      transition: transform .2s;
+      margin-top: 3px
+    }
+
+    .card.open .chev {
+      transform: rotate(180deg)
+    }
+
+    .body {
+      display: none;
+      padding: 0 15px 15px;
+      animation: fade .2s ease
+    }
+
+    .card.open .body {
+      display: block
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0;
+        transform: translateY(-3px)
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    .body p {
+      margin: 0 0 8px
+    }
+
+    .body ul {
+      margin: 2px 0 10px;
+      padding-left: 18px
+    }
+
+    .body li {
+      margin-bottom: 5px;
+      font-size: 14.5px
+    }
+
+    .body .pin {
+      background: var(--red-soft);
+      color: var(--red);
+      font-weight: 600;
+      font-size: 13px;
+      padding: 7px 11px;
+      border-radius: 9px;
+      margin: 2px 0 10px;
+      display: block
+    }
+
+    .body b {
+      color: var(--ink)
+    }
+
+    .kbd {
+      font-family: "Be Vietnam Pro", sans-serif;
+      font-weight: 600;
+      background: #f0ebe0;
+      border: 1px solid var(--line);
+      padding: 1px 7px;
+      border-radius: 6px;
+      font-size: 13.5px;
+      color: var(--ink);
+      white-space: nowrap
+    }
+
+    /* ===== Tables ===== */
+    .tblwrap {
+      overflow-x: auto;
+      margin: 2px 0 6px
+    }
+
+    .tbl {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2px 0 6px;
+      font-size: 13.5px
+    }
+
+    .tbl th,
+    .tbl td {
+      border: 1px solid var(--line);
+      padding: 7px 9px;
+      text-align: left;
+      vertical-align: top
+    }
+
+    .tbl th {
+      background: #f3eee3;
+      font-weight: 600;
+      font-size: 12.5px;
+      color: var(--ink-2)
+    }
+
+    .tbl td .kbd {
+      font-size: 13px
+    }
+
+    .tbl tr:nth-child(even) td {
+      background: #fcfaf5
+    }
+
+    /* ===== Sơ đồ A4 (Phụ lục 1) ===== */
+    .a4 {
+      position: relative;
+      width: 100%;
+      max-width: 420px;
+      margin: 8px auto 4px;
+      aspect-ratio: 210/297;
+      background: #fff;
+      border: 1.5px solid var(--ink);
+    }
+
+    .a4 .in {
+      position: absolute;
+      top: 6.7%;
+      bottom: 6.7%;
+      left: 14.3%;
+      right: 7.1%;
+      border: 1px dashed #c9c0b0;
+    }
+
+    .a4 .bx {
+      position: absolute;
+      border: 1.2px solid var(--ink);
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9.5px;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1;
+    }
+
+    .a4 .bx.rd {
+      border-radius: 50%;
+      z-index: 2;
+      background: #fff;
+    }
+
+    .a4 .kline {
+      position: absolute;
+      left: 0;
+      right: 0;
+      border-top: 1.2px solid var(--ink);
+    }
+
+    .a4 .mlbl {
+      position: absolute;
+      font-size: 8.5px;
+      color: var(--ink-2);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .a4note {
+      font-size: 11px;
+      color: var(--ink-2);
+      text-align: center;
+      margin: 0 0 10px
+    }
+
+    .empty {
+      text-align: center;
+      color: var(--ink-2);
+      padding: 48px 20px;
+      font-size: 14.5px
+    }
+
+    .empty b {
+      display: block;
+      color: var(--ink);
+      font-size: 16px;
+      margin-bottom: 4px
+    }
+
+    mark {
+      background: #ffe9a8;
+      color: inherit;
+      padding: 0 1px;
+      border-radius: 3px
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 11.5px;
+      color: var(--ink-2);
+      margin-top: 26px;
+      line-height: 1.6
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="top">
+    <div class="brand">
+      <div class="star">★</div>
+      <div>
+        <h1>Tra cứu HD986</h1>
+        <p>Thể thức văn bản — HVCTQGHCM · hiện hành, thay thế HD488</p>
+      </div>
+    </div>
+    <div class="searchbox">
+      <div class="field">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <circle cx="11" cy="11" r="7" />
+          <path d="m20 20-3.5-3.5" />
+        </svg>
+        <input id="q" type="search" inputmode="search" placeholder="Tìm: ký hiệu, định lề, cỡ chữ, nơi nhận…"
+          autocomplete="off">
+        <button class="clearbtn" id="clear" aria-label="Xóa">×</button>
+      </div>
+    </div>
+    <div class="tabs" id="tabs">
+      <button class="tab active" data-tab="thethuc">Thể thức bắt buộc</button>
+      <button class="tab" data-tab="bosung">Bổ sung</button>
+      <button class="tab" data-tab="bansao">Bản sao</button>
+      <button class="tab" data-tab="kythuat">Kỹ thuật trình bày</button>
+      <button class="tab" data-tab="phuluc">Phụ lục</button>
+    </div>
+  </header>
+
+  <main class="wrap" id="main"></main>
+
+  <script>
+    /* ---------- DỮ LIỆU ---------- */
+    const META = ['Số 986-HD/HVCTQGHCM', 'Ban hành 14/7/2026 · hiệu lực từ ngày ký', 'Thay thế HD 488-HD/HVCTQG (18/10/2018)'];
+    const DATA = {
+      thethuc: {
+        meta: META,
+        groups: [
+          {
+            name: 'Phần I · Hướng dẫn chung', items: [
+              {
+                t: 'Phạm vi điều chỉnh và đối tượng áp dụng', s: 'Văn bản giấy + điện tử · toàn hệ thống Học viện',
+                body: `<ul><li>Điều chỉnh: thể thức và kỹ thuật trình bày <b>văn bản giấy và văn bản điện tử</b> của Học viện và các đơn vị trực thuộc.</li>
+        <li>Văn bản chứa bí mật nhà nước: theo Hướng dẫn này và pháp luật về bảo vệ bí mật nhà nước.</li>
+        <li><b>Không thuộc phạm vi:</b> văn bản chuyên ngành, văn bản in thành sách và các ấn phẩm khác.</li>
+        <li>Áp dụng trong <b>toàn hệ thống</b> Học viện Chính trị quốc gia Hồ Chí Minh.</li></ul>`,
+                k: 'pham vi dieu chinh doi tuong ap dung van ban giay dien tu bi mat nha nuoc chuyen nganh an pham'
+              },
+              {
+                t: 'Yêu cầu', s: 'Thống nhất thể thức và kỹ thuật trình bày',
+                body: `<p>Văn bản chính thức của Học viện và các đơn vị trực thuộc Học viện phải <b>thống nhất về thể thức và kỹ thuật trình bày</b>.</p>`,
+                k: 'yeu cau thong nhat the thuc ky thuat trinh bay'
+              },
+              {
+                t: 'Trách nhiệm của cá nhân', s: 'Người ký · Chánh Văn phòng · người soạn thảo · văn thư',
+                body: `<ul><li><b>Người ký văn bản</b>: chịu trách nhiệm về thể thức và kỹ thuật trình bày.</li>
+        <li><b>Chánh Văn phòng</b> (hoặc người được giao phụ trách công tác văn phòng): thẩm định thể thức và kỹ thuật trình bày.</li>
+        <li><b>Người soạn thảo</b>: thực hiện đúng hướng dẫn.</li>
+        <li><b>Văn thư cơ quan</b>: kiểm tra thể thức và kỹ thuật trình bày trước khi trình ký, phát hành.</li></ul>`,
+                k: 'trach nhiem ca nhan nguoi ky chanh van phong nguoi soan thao van thu tham dinh kiem tra trinh ky phat hanh'
+              },
+            ]
+          },
+          {
+            name: '9 thành phần thể thức bắt buộc', items: [
+              {
+                n: '1', t: 'Tiêu đề "Đảng Cộng sản Việt Nam"', s: 'Góc phải, dòng đầu · in hoa 15 đứng đậm',
+                body: `<ul><li>Là thành phần thể thức <b>xác định văn bản của Đảng</b>.</li>
+        <li>Trang đầu, <b>góc phải, dòng đầu</b>; phía dưới có <b>đường kẻ ngang nét liền</b> dài bằng độ dài tiêu đề, ngăn cách với địa danh và ngày, tháng, năm (ô số 1, Phụ lục 1).</li>
+        <li>Trình bày: in hoa, chữ đứng, đậm, cỡ chữ <b>15</b>.</li></ul>
+        <p><b>Ví dụ:</b> ĐẢNG CỘNG SẢN VIỆT NAM</p>`,
+                k: 'tieu de dang cong san viet nam goc phai dong dau duong ke ngang net lien in hoa 15 dung dam'
+              },
+              {
+                n: '2', t: 'Tên cơ quan ban hành văn bản', s: 'Góc trái, ngang tiêu đề · dưới có dấu sao (*)',
+                body: `<ul><li>Xác định <b>tác giả văn bản</b>; ghi chính xác, đầy đủ theo văn bản thành lập. Gồm <b>cơ quan cấp trên trực tiếp</b> và <b>cơ quan ban hành</b>.</li>
+        <li><b>Góc trái, dòng đầu</b>, ngang với tiêu đề; phía dưới có <b>dấu sao (*)</b> ngăn cách với số và ký hiệu (ô số 2, Phụ lục 1).</li>
+        <li>Cân đối dưới tên cơ quan cấp trên trực tiếp (nếu có); tên dài có thể nhiều dòng.</li>
+        <li>Liên cơ quan: cơ quan <b>chủ trì ghi trước</b>, giữa các tên có dấu gạch nối (-).</li>
+        <li>Cấp trên trực tiếp: in hoa, đứng, cỡ <b>14</b>. Cơ quan ban hành: in hoa, đứng, <b>đậm</b>, cỡ <b>14</b>.</li></ul>
+        <p><b>Ví dụ:</b> BAN CHẤP HÀNH TRUNG ƯƠNG / <b>HỌC VIỆN CHÍNH TRỊ QUỐC GIA HỒ CHÍ MINH</b>; VĂN PHÒNG HỌC VIỆN / <b>PHÒNG HÀNH CHÍNH – TỔNG HỢP</b>; liên cơ quan: <b>VĂN PHÒNG HỌC VIỆN – VỤ TỔ CHỨC CÁN BỘ</b></p>`,
+                k: 'ten co quan ban hanh goc trai dau sao cap tren truc tiep lien co quan gach noi in hoa 14 dam van phong hoc vien ban chi dao'
+              },
+              {
+                n: '3', t: 'Số và ký hiệu văn bản', s: 'Từ 01 theo năm dương lịch · số nhỏ hơn 10 thêm 0',
+                body: `<span class="pin">Số ghi liên tục từ 01 cho mỗi tên loại theo NĂM DƯƠNG LỊCH (01/01 → 31/12)</span>
+        <ul><li>Số văn bản mật ghi liên tục với số không mật cùng tên loại. Liên cơ quan: ghi liên tục với số cùng tên loại của cơ quan chủ trì.</li>
+        <li>Ký hiệu = viết tắt tên loại + viết tắt cơ quan ban hành: NQ (nghị quyết), CT (chỉ thị), KL (kết luận), QC (quy chế), BC (báo cáo)…</li>
+        <li>Trùng chữ cái đầu thì thống nhất: <span class="kbd">QĐ</span> Quyết định, Quy định · <span class="kbd">CTr</span> Chương trình · <span class="kbd">TTr</span> Tờ trình.</li>
+        <li>Cân đối dưới tên cơ quan ban hành; in thường, đứng, cỡ <b>14</b> (ô số 3, Phụ lục 1).</li>
+        <li>Số nhỏ hơn 10 <b>thêm số 0</b> phía trước; giữa số và ký hiệu là gạch nối (-); giữa tên loại và cơ quan là gạch chéo (/); giữa các liên cơ quan là gạch nối (-).</li>
+        <li>Ký hiệu tên đơn vị: xem Phụ lục 3.</li></ul>
+        <p><b>Ví dụ:</b> Số 23-QĐ/HVCTQGHCM · Số 06-CV/VPHV · Số 05-QC/HVCTQGHCM-UBKTTW</p>`,
+                k: 'so ky hieu van ban nam duong lich 01 them so 0 gach noi gach cheo mat lien co quan qd ctr ttr nq ct kl qc bc'
+              },
+              {
+                n: '4', t: 'Địa danh và ngày, tháng, năm', s: 'In thường 14 nghiêng · ngày dưới 10, tháng dưới 3 thêm 0',
+                body: `<ul><li>Địa danh = tên chính thức đơn vị hành chính (tỉnh, thành phố trực thuộc Trung ương) nơi đặt trụ sở. Liên cơ quan: theo cơ quan chủ trì.</li>
+        <li>Địa danh mang tên người hoặc một âm tiết: <b>thêm cấp hành chính</b> phía trước (ví dụ: Thành phố Huế); cấp hành chính có thể viết tắt (TP).</li>
+        <li>Ngày, tháng, năm = ngày người có thẩm quyền <b>ký</b> văn bản.</li>
+        <li>Cân đối dưới tiêu đề (ô số 4, Phụ lục 1). Ngày dưới 10 và tháng dưới 3 <b>thêm số 0</b>; viết đầy đủ chữ ngày, tháng, năm; giữa địa danh và ngày tháng có dấu phẩy (,).</li>
+        <li>Trình bày: in thường, <b>nghiêng</b>, cỡ <b>14</b>.</li></ul>
+        <p><b>Ví dụ:</b> <i>Hà Nội, ngày 03 tháng 02 năm 2026</i></p>`,
+                k: 'dia danh ngay thang nam ban hanh them so 0 dau phay nghieng 14 thanh pho hue tp mot am tiet'
+              },
+              {
+                n: '5', t: 'Tên loại và trích yếu nội dung', s: 'Chính giữa · dưới có 05 dấu gạch nối · công văn không ghi tên loại',
+                body: `<ul><li>Mọi văn bản đều ghi tên loại, <b>trừ công văn</b>. Trích yếu là cụm từ ngắn gọn phản ánh nội dung chủ yếu; một số văn bản có thể ghi tác giả vào trích yếu.</li>
+        <li><b>Không lồng ghép</b> loại văn bản này trong loại văn bản khác (ví dụ: Quyết định ban hành quy chế…; Thông báo ban hành kế hoạch…).</li>
+        <li>Tên loại một dòng riêng; trích yếu cân đối dưới; phía dưới có <b>05 dấu gạch nối (-)</b> ngăn cách với nội dung. Trình bày chính giữa trang đầu (ô số 5a, Phụ lục 1).</li>
+        <li>Trích yếu của <b>công văn</b>: cân đối dưới số và ký hiệu (ô số 5b, Phụ lục 1).</li>
+        <li>Tên loại: in hoa, đứng, đậm, cỡ <b>15-16</b>. Trích yếu: in thường, đứng, đậm, cỡ <b>14-15</b>. Trích yếu công văn: in thường, nghiêng, cỡ <b>12</b>.</li></ul>
+        <p><b>Ví dụ:</b> Số 686-CV/HVCTQGHCM — <i>về việc thay đổi thể thức trình bày văn bản</i></p>`,
+                k: 'ten loai trich yeu noi dung chinh giua 5 gach noi cong van khong long ghep 15-16 14-15 12 nghieng'
+              },
+              {
+                n: '6', t: 'Nội dung văn bản', s: 'Dàn đều hai lề · lùi đầu dòng 10 mm · dòng 18-22 pt',
+                body: `<p><b>Yêu cầu:</b></p>
+        <ul><li>Đúng chủ trương, đường lối của Đảng, chính sách, pháp luật của Nhà nước.</li>
+        <li>Phù hợp tên loại; văn phong phổ thông, đúng ngữ pháp tiếng Việt, chính xác, rõ ràng, dễ hiểu.</li>
+        <li>Viết tắt cụm từ thông dụng dùng nhiều lần; <b>lần đầu đặt trong ngoặc đơn</b> ngay sau cụm từ.</li>
+        <li>Viện dẫn lần đầu: ghi đầy đủ tên loại, số, ký hiệu, ngày tháng năm, cơ quan ban hành và trích yếu; lần sau chỉ ghi tên loại và số, ký hiệu.</li>
+        <li>Giải thích thuật ngữ chuyên môn; bố cục theo phần, chương, mục, điều, khoản, điểm… phù hợp.</li></ul>
+        <p><b>Kỹ thuật (ô số 6, Phụ lục 1):</b></p>
+        <ul><li>Dàn đều cả hai lề; xuống dòng lùi vào khoảng <b>10 mm</b>; Spacing đoạn tối thiểu <b>6pt</b>; Line spacing <b>18–22pt (Exactly)</b>; kết thúc có dấu chấm (.).</li>
+        <li><b>Căn cứ</b> (nếu có): dưới tên loại và trích yếu; ghi đầy đủ (luật, pháp lệnh ghi tên + năm); mỗi căn cứ một dòng/khổ riêng, đầu có gạch ngang (-), cuối có chấm phẩy (;), căn cứ cuối có dấu chấm (.).</li>
+        <li>"Phần", "Chương" + số thứ tự (La Mã hoặc chữ) cùng dòng, chính giữa; tên phần/chương ở dòng liền dưới. "Mục" + số Ả-rập chính giữa; tên mục dòng dưới. "Điều" + số Ả-rập + tên cùng dòng, sau số có dấu chấm. Khoản: số Ả-rập + dấu chấm. Điểm: a, b, c… + ngoặc đơn đóng.</li></ul>`,
+                k: 'noi dung van ban dan deu hai le lui 10 mm spacing 6pt line spacing 18 22pt exactly can cu phan chuong muc dieu khoan diem vien dan viet tat'
+              },
+              {
+                n: '7', t: 'Quyền hạn, chức vụ, họ tên, chữ ký', s: 'Góc phải · K/T, T/L, Q. · chữ ký mực xanh',
+                body: `<ul><li>Quyền hạn ký phải được <b>quy định bằng văn bản</b>. Chế độ thủ trưởng: cấp trưởng ký trực tiếp; cấp phó ký thay <span class="kbd">K/T</span>; được ủy quyền ký thừa lệnh <span class="kbd">T/L</span> (người được ủy quyền ký trực tiếp, không ủy quyền lại).</li>
+        <li>Chưa bổ nhiệm cấp trưởng: phó phụ trách <b>ký trực tiếp</b>, không đề K/T. Quyền cấp trưởng: <span class="kbd">Q.</span> (ví dụ: Q. VỤ TRƯỞNG).</li>
+        <li>Chức vụ = chức vụ chính thức được bầu, bổ nhiệm, phân công; <b>không ghi tên cơ quan kèm chức vụ</b> (trừ đơn vị không có con dấu riêng và văn bản liên cơ quan).</li>
+        <li>Họ tên đầy đủ; <b>không ghi học hàm, học vị, quân hàm, danh hiệu</b>. Không ký nháy, ký tắt.</li>
+        <li>Biên bản hội nghị: người ghi biên bản bên trái, chủ trì bên phải; nếu không được đóng dấu lên chữ ký chủ trì thì lãnh đạo văn phòng thừa lệnh <b>xác nhận chữ ký</b> ("Xác nhận chữ ký của đồng chí…").</li>
+        <li>Liên cơ quan: ghi đầy đủ chức vụ + tên cơ quan; cơ quan chủ trì/người chịu trách nhiệm chính bên <b>phải</b>, các bên khác bên trái, nhiều thì xuống dòng dưới.</li>
+        <li>Trình bày: quyền hạn, chức vụ góc phải dưới nội dung (7a); chữ ký dưới (7c); họ tên dưới chữ ký (7b). Chữ ký giấy: <b>mực xanh</b> — không bút chì, mực đỏ, mực nhạt, mực dễ phai. Chữ ký điện tử: màu xanh, định dạng <b>.png nền trong suốt</b>, căn giữa chức vụ và họ tên.</li></ul>
+        <p><b>Ví dụ:</b> GIÁM ĐỐC · K/T GIÁM ĐỐC / PHÓ GIÁM ĐỐC · T/L GIÁM ĐỐC / CHÁNH VĂN PHÒNG</p>`,
+                k: 'quyen han chuc vu ho ten chu ky kt tl q ky thay thua lenh quyen muc xanh png nen trong suot bien ban hoi nghi xac nhan chu ky lien co quan hoc ham hoc vi'
+              },
+              {
+                n: '8', t: 'Dấu cơ quan ban hành văn bản', s: 'Trùm 1/3 chữ ký về bên trái · mực đỏ tươi · giáp lai tối đa 5 tờ',
+                body: `<ul><li>Xác nhận <b>pháp nhân, thẩm quyền</b>; văn bản ban hành phải có dấu để bảo đảm giá trị pháp lý và hiệu lực thi hành.</li>
+        <li>Đơn vị không có con dấu riêng: thủ trưởng (hoặc cấp phó được ủy quyền) ký; cần phát hành có dấu thì <b>ký thừa lệnh dùng dấu cấp trên</b>.</li>
+        <li>Trình bày dưới quyền hạn, chức vụ người ký (ô số 8, Phụ lục 1). Dấu giấy: rõ ràng, ngay ngắn, đúng chiều, <b>trùm lên khoảng 1/3 chữ ký về phía bên trái</b>; mực <b>đỏ tươi</b>.</li>
+        <li>Chữ ký số cơ quan = hình ảnh dấu, màu đỏ, <b>kích thước bằng thực tế</b>, .png nền trong suốt.</li>
+        <li><b>Dấu treo</b>: đóng trang đầu phụ lục, trùm một phần tên phụ lục. <b>Dấu giáp lai</b>: giữa mép phải các trang trong từng phụ lục, trùm một phần các tờ; mỗi khuôn dấu đóng <b>tối đa 5 tờ</b>.</li></ul>`,
+                k: 'dau co quan trum 1/3 chu ky ben trai muc do tuoi chu ky so png dau treo dau giap lai 5 to dau noi dau uot phap nhan'
+              },
+              {
+                n: '9', t: 'Nơi nhận văn bản', s: 'Góc trái, dưới nội dung · "Nơi nhận" gạch chân · Kính gửi, Kính trình',
+                body: `<ul><li>Xác định tổ chức, cơ quan, cá nhân nhận văn bản (để thực hiện, giải quyết, báo cáo, biết, trao đổi, lưu…). Gửi cụ thể: ghi từng tên; gửi nhiều: ghi chung theo nhóm.</li>
+        <li><b>Góc trái, dưới nội dung</b> (ô số 9a, Phụ lục 1). "Nơi nhận" một dòng riêng, dưới có đường kẻ ngang nét liền dài bằng cụm từ.</li>
+        <li><b>Công văn</b>: nơi nhận trực tiếp liệt kê tại "Kính gửi" chính giữa trang đầu (ô số 5a); dòng đầu "Nơi nhận" cuối văn bản thêm <b>"Như trên"</b>.</li>
+        <li><b>Tờ trình</b>: thêm "Kính trình" + nơi nhận trực tiếp dưới tên loại và trích yếu (ô số 9b); dòng đầu "Nơi nhận" thêm "Như trên".</li>
+        <li>Dấu câu: sau "Nơi nhận", "Kính gửi", "Kính trình" có hai chấm (:); sau mỗi nơi nhận có chấm phẩy (;); kết thúc nơi lưu có dấu chấm (.).</li></ul>`,
+                k: 'noi nhan goc trai gach chan kinh gui kinh trinh nhu tren cong van to trinh hai cham cham phay luu'
+              },
+            ]
+          },
+        ]
+      },
+      bosung: {
+        meta: META,
+        groups: [
+          {
+            name: 'Thành phần bổ sung — người ký quyết định', items: [
+              {
+                t: 'Phụ lục văn bản', s: 'Trình bày riêng, có tiêu đề · từ 2 phụ lục đánh số Ả-rập',
+                body: `<ul><li>Văn bản có phụ lục kèm theo thì phải có <b>chỉ dẫn về phụ lục</b> trong văn bản.</li>
+        <li>Phụ lục trình bày riêng, có tiêu đề; <b>từ hai phụ lục trở lên</b> ghi số thứ tự bằng chữ số Ả-rập.</li>
+        <li>Từ "Phụ lục" và số thứ tự trình bày một dòng riêng, cách đều hai mép phải trái phần có chữ; tiêu đề ở dưới; dưới tiêu đề ghi chỉ dẫn kèm theo văn bản (số, ký hiệu; ngày tháng năm; tên cơ quan ban hành).</li></ul>`,
+                k: 'phu luc chi dan tieu de so thu tu a-rap kem theo'
+              },
+              {
+                t: 'Dấu chỉ mức độ mật', s: 'Theo pháp luật bảo vệ bí mật nhà nước',
+                body: `<p>Dấu chỉ mức độ mật và các thông tin cần thiết trên văn bản mật thực hiện theo <b>quy định hiện hành của pháp luật về bảo vệ bí mật nhà nước</b>.</p>`,
+                k: 'dau mat bi mat nha nuoc'
+              },
+              {
+                t: 'Dấu chỉ mức độ khẩn', s: 'Khẩn · Thượng khẩn · Hoả tốc',
+                body: `<ul><li>Gồm: <b>Khẩn, thượng khẩn, hoả tốc</b>; tuỳ yêu cầu chuyển nhanh văn bản để xác định độ khẩn.</li>
+        <li>Trình bày <b>dưới số và ký hiệu</b> văn bản; riêng công văn: dưới trích yếu nội dung (ô số 10, Phụ lục 1).</li>
+        <li>Trình bày: in hoa, đứng, đậm, cỡ 14 (Phụ lục 2).</li></ul>`,
+                k: 'dau khan thuong khan hoa toc duoi so ky hieu in hoa 14'
+              },
+              {
+                t: 'Chỉ dẫn phạm vi phổ biến, dự thảo, tài liệu hội nghị', s: 'Trang đầu, góc phải, cách mép trên 10 mm',
+                body: `<ul><li>Chỉ dẫn: "Không phổ biến trên phương tiện thông tin đại chúng", "tài liệu thu hồi", "xem xong trả lại", "lưu hành nội bộ"… — trang đầu, góc phải, <b>cách mép trên 10 mm</b> (ô số 11a, Phụ lục 1).</li>
+        <li>Riêng "Không phổ biến trên phương tiện thông tin đại chúng": <b>trang cuối, chính giữa, cách mép dưới 10 mm</b>.</li>
+        <li>Văn bản dự thảo nhiều lần: chỉ dẫn thứ tự lần dự thảo (ví dụ: <i>Dự thảo lần 2</i>), trình bày dưới số và ký hiệu (ô số 11b, Phụ lục 1).</li></ul>`,
+                k: 'chi dan pham vi pho bien luu hanh noi bo tai lieu thu hoi xem xong tra lai du thao tai lieu hoi nghi 10 mm'
+              },
+              {
+                t: 'Ký hiệu người soạn thảo và số lượng bản phát hành', s: 'Cuối nơi nhận · khi cần quản lý số lượng bản',
+                body: `<p>Văn bản cần quản lý số lượng bản phát hành thì ghi <b>ký hiệu người soạn thảo và số lượng bản phát hành</b>; trình bày tại <b>cuối nơi nhận</b> văn bản (ô số 12, Phụ lục 1).</p>
+        <p><b>Ví dụ:</b> <span class="kbd">NguyenVanAn-26</span></p>`,
+                k: 'ky hieu nguoi soan thao so luong ban phat hanh cuoi noi nhan'
+              },
+              {
+                t: 'Thông tin liên hệ của cơ quan ban hành', s: 'Trang cuối, dưới đường kẻ nét liền · cỡ chữ 10',
+                body: `<p>Nếu cần thiết: ghi địa chỉ cơ quan, thư điện tử (email), số điện thoại, số fax, website để liên hệ công việc.</p>
+        <p>Trình bày tại <b>trang cuối</b>, dưới một <b>đường kẻ nét liền kéo dài hết chiều ngang</b> của vùng trình bày văn bản (ô số 13, Phụ lục 1); in thường, đứng, cỡ 10.</p>`,
+                k: 'thong tin lien he dia chi email dien thoai fax website trang cuoi duong ke net lien co 10'
+              },
+            ]
+          },
+        ]
+      },
+      bansao: {
+        meta: META,
+        groups: [
+          {
+            name: 'Thành phần thể thức bản sao', items: [
+              {
+                t: 'Bản sao văn bản', s: 'Sao giấy→giấy · giấy→điện tử · điện tử→giấy',
+                body: `<ul><li>Bản sao = bản được tạo ra từ việc <b>chép lại hoặc tạo bản khác theo đúng nội dung</b> của bản gốc, bản chính hoặc bản sao văn bản.</li>
+        <li>Gồm: sao từ văn bản giấy sang giấy, giấy sang điện tử, điện tử sang giấy.</li>
+        <li>Bản sao chứa bí mật nhà nước: theo pháp luật và quy định hiện hành về bảo vệ bí mật nhà nước.</li></ul>`,
+                k: 'ban sao van ban chep lai ban goc ban chinh giay dien tu bi mat'
+              },
+              {
+                t: 'Sao sang văn bản giấy', s: 'Dấu "Bản sao văn bản" · ngăn cách bằng đường kẻ nét liền',
+                body: `<ul><li>Phải đóng dấu <b>"Bản sao văn bản"</b> và trình bày thể thức quyền hạn, chức vụ, họ tên, chữ ký của người có thẩm quyền sao.</li>
+        <li>Trình bày <b>cuối văn bản cần sao</b>, ngăn cách bằng đường kẻ nét liền dài hết chiều ngang vùng trình bày (sơ đồ tại Phụ lục 3; mẫu dấu theo Phụ lục Hướng dẫn 05-HD/VPTW ngày 27/5/2026).</li>
+        <li>Dấu "Bản sao văn bản": <b>bên trái, dưới nơi nhận</b> của văn bản được sao. Quyền hạn, chức vụ, họ tên, chữ ký người sao: <b>bên phải</b>, dưới phần ký của văn bản được sao.</li>
+        <li>Dấu cơ quan sao: dưới quyền hạn, chức vụ và <b>trùm 1/3 chữ ký</b> của người có thẩm quyền sao.</li>
+        <li>Sao nhiều bản: nhân bản từ bản sao đầu tiên đã đóng dấu và có chữ ký trực tiếp, sau đó đóng dấu cơ quan (nếu có) lên từng bản sao.</li></ul>`,
+                k: 'sao sang giay dau ban sao van ban duong ke net lien ben trai duoi noi nhan trum 1/3 nhan ban'
+              },
+              {
+                t: 'Sao sang văn bản điện tử', s: 'Số hoá (scan) + ký số cá nhân + ký số cơ quan',
+                body: `<ul><li>Thực hiện bằng <b>số hoá (scan)</b> văn bản giấy bảo đảm tiêu chuẩn của cơ quan có thẩm quyền, <b>ký số của người có thẩm quyền</b> và <b>ký số của cơ quan, tổ chức</b> sao văn bản.</li>
+        <li>Chữ ký số của cơ quan sao: góc trên, bên phải, trang đầu (ô số 14, Phụ lục 1).</li>
+        <li>Chữ ký số của người có thẩm quyền sao: góc trên, bên phải, trang đầu (ô số 15, Phụ lục 1).</li>
+        <li>Chữ ký số cá nhân và cơ quan thực hiện theo Hướng dẫn của Văn phòng Trung ương Đảng về sử dụng chữ ký số trong cơ quan, tổ chức đảng.</li></ul>`,
+                k: 'sao sang dien tu so hoa scan ky so ca nhan co quan goc tren ben phai o 14 15'
+              },
+            ]
+          },
+        ]
+      },
+      kythuat: {
+        meta: META,
+        groups: [
+          {
+            name: 'Phông chữ, khổ giấy, định lề, số trang', items: [
+              {
+                t: 'Phông chữ', s: 'Times New Roman · Unicode TCVN 6909:2001 · màu đen',
+                body: `<span class="pin">Times New Roman — bộ mã Unicode TCVN 6909:2001 — màu đen</span>
+        <p>Phông chữ tiếng Việt, dùng thống nhất cho văn bản của Học viện.</p>`,
+                k: 'phong chu times new roman unicode tcvn 6909 2001 mau den'
+              },
+              {
+                t: 'Cỡ chữ và kiểu chữ', s: 'Theo từng thành phần thể thức — Phụ lục 2',
+                body: `<p>Cỡ chữ và kiểu chữ theo quy định cụ thể cho <b>từng thành phần thể thức</b> tại Phụ lục 2 (xem tab <b>Phụ lục</b> — bảng đầy đủ 15 mục).</p>`,
+                k: 'co chu kieu chu phu luc 2 thanh phan the thuc'
+              },
+              {
+                t: 'Khổ giấy', s: 'A4 (210 × 297 mm) · hành chính: A4/A5 hoặc mẫu in sẵn',
+                body: `<ul><li>Văn bản giấy và điện tử trình bày trên khổ <b>A4 (210 mm × 297 mm)</b>.</li>
+        <li>Văn bản, giấy tờ hành chính: A4 hoặc <b>A5 (148 mm × 210 mm)</b> hoặc mẫu in sẵn.</li></ul>`,
+                k: 'kho giay a4 210 297 a5 148 210 mau in san'
+              },
+              {
+                t: 'Định lề trang văn bản', s: 'Trên 20 · Dưới 20 · Trái 30 · Phải 15 (mm)',
+                body: `<span class="pin">Trên 20 — Dưới 20 — Trái 30 — Phải 15 (mm)</span>
+        <ul><li>Trình bày theo chiều dọc trang (định hướng bản in chiều dọc).</li>
+        <li><b>In hai mặt, mặt sau:</b> trên 20 — dưới 20 — trái <b>15</b> — phải <b>30</b> (mm).</li>
+        <li>Nội dung có bảng, biểu: có thể trình bày theo <b>chiều ngang</b> trang; căn cứ vùng trình bày chiều dọc để bố trí phù hợp.</li></ul>`,
+                k: 'dinh le trang tren duoi trai phai 20 30 15 mm in hai mat bang bieu chieu ngang'
+              },
+              {
+                t: 'Số trang văn bản', s: 'Chữ số Ả-rập · điểm giữa · cách mép trên 10 mm · ẩn trang 1',
+                body: `<ul><li>Ghi bằng <b>chữ số Ả-rập</b>; tại <b>điểm giữa</b>, cách mép trên trang <b>10 mm</b>, cách đều hai mép phải trái phần có chữ.</li>
+        <li><b>Không hiển thị số trang ở trang thứ nhất.</b></li>
+        <li>Số trang của phụ lục ghi <b>riêng cho từng phụ lục</b>.</li></ul>`,
+                k: 'so trang a-rap diem giua cach mep tren 10 mm an trang 1 phu luc rieng'
+              },
+            ]
+          },
+          {
+            name: 'Tổ chức thực hiện', items: [
+              {
+                t: 'Hiệu lực và trách nhiệm thực hiện', s: 'Hiệu lực từ ngày ký · thay thế HD 488 (18/10/2018)',
+                body: `<span class="pin">Hiệu lực từ ngày ký — thay thế Hướng dẫn số 488-HD/HVCTQG ngày 18/10/2018</span>
+        <ul><li>Quy định, hướng dẫn được dẫn chiếu nếu có sửa đổi, bổ sung, thay thế thì <b>áp dụng theo bản mới</b>.</li>
+        <li>Thủ trưởng các đơn vị trực thuộc Học viện triển khai thực hiện.</li>
+        <li><b>Văn phòng Học viện</b> kiểm tra, theo dõi việc thực hiện; đề xuất sửa đổi, bổ sung hoặc thay thế khi cần thiết.</li>
+        <li>Ký ban hành: K/T GIÁM ĐỐC — PHÓ GIÁM ĐỐC Nguyễn Duy Bắc.</li></ul>`,
+                k: 'hieu luc ngay ky thay the 488 2018 to chuc thuc hien van phong hoc vien nguyen duy bac'
+              },
+            ]
+          },
+        ]
+      },
+      phuluc: {
+        meta: META,
+        groups: [
+          {
+            name: 'Phụ lục 1 · Sơ đồ bố trí thành phần thể thức', items: [
+              {
+                t: 'Sơ đồ bố trí trên trang A4', s: 'Vị trí 15 thành phần · lề 20-20-30-15 mm',
+                body: `<div class="a4">
+        <span class="mlbl" style="top:2.2%;left:50%;transform:translateX(-50%)">↕ 20mm</span>
+        <span class="mlbl" style="top:50%;left:1.5%;transform:rotate(-90deg) translateX(50%);transform-origin:left">↔ 30mm</span>
+        <span class="mlbl" style="top:50%;right:0.5%;transform:rotate(90deg) translateX(-50%);transform-origin:right">↔ 15mm</span>
+        <span class="mlbl" style="bottom:2.2%;left:50%;transform:translateX(-50%)">↕ 20mm</span>
+        <div class="in">
+          <div class="bx" style="top:-5%;right:23%;width:11%;height:4.2%">11a</div>
+          <div class="bx" style="top:-5%;right:11.5%;width:11%;height:4.2%">14</div>
+          <div class="bx" style="top:-5%;right:0;width:11%;height:4.2%">15</div>
+          <div class="bx" style="top:1.5%;left:0;width:38%;height:5%">2</div>
+          <div class="bx" style="top:1.5%;right:0;width:30%;height:5%">1</div>
+          <div class="bx" style="top:8.5%;left:4%;width:26%;height:4.5%">3</div>
+          <div class="bx" style="top:14%;left:4%;width:26%;height:4.5%">5b</div>
+          <div class="bx" style="top:19.5%;left:4%;width:26%;height:4.5%">11b</div>
+          <div class="bx" style="top:25%;left:4%;width:26%;height:4.5%">10</div>
+          <div class="bx" style="top:9%;right:0;width:30%;height:5%">4</div>
+          <div class="bx" style="top:32%;left:22%;width:56%;height:5%">5a</div>
+          <div class="bx" style="top:38.5%;left:30%;width:40%;height:4.5%">9b</div>
+          <div class="bx" style="top:45%;left:0;width:100%;height:21%">6</div>
+          <div class="bx" style="top:68.5%;left:0;width:30%;height:5%">9a</div>
+          <div class="bx" style="top:74.5%;left:20%;width:12%;height:4%">12</div>
+          <div class="bx" style="top:68.5%;right:0;width:28%;height:4.2%">7a</div>
+          <div class="bx" style="top:73.4%;right:0;width:28%;height:4.2%">7c</div>
+          <div class="bx" style="top:78.3%;right:0;width:28%;height:4.2%">7b</div>
+          <div class="bx rd" style="top:70.5%;right:24%;width:14%;height:10%">8</div>
+          <div class="kline" style="top:86%"></div>
+          <span class="mlbl" style="top:86.8%;left:50%;transform:translateX(-50%)">(Đường kẻ nét liền)</span>
+          <div class="bx" style="top:91%;left:25%;width:50%;height:5%">13</div>
+        </div>
+        </div>
+        <p class="a4note">Tái hiện sơ đồ Phụ lục 1 — vị trí tương đối các ô trên khổ A4</p>
+        <p><b>Ghi chú các ô:</b></p>
+        <ul><li><b>1.</b> Tiêu đề "Đảng Cộng sản Việt Nam" · <b>2.</b> Tên cơ quan, đơn vị ban hành · <b>3.</b> Số và ký hiệu · <b>4.</b> Địa danh và ngày, tháng, năm</li>
+        <li><b>5a.</b> Thể loại và trích yếu nội dung · <b>5b.</b> Trích yếu nội dung công văn · <b>6.</b> Nội dung văn bản (có thể nhiều trang)</li>
+        <li><b>7a, 7b, 7c.</b> Quyền hạn, chức vụ, họ tên và chữ ký của người có thẩm quyền · <b>8.</b> Dấu, chữ ký số của cơ quan, đơn vị</li>
+        <li><b>9a, 9b.</b> Nơi nhận văn bản · <b>10.</b> Dấu chỉ mức độ khẩn · <b>11a.</b> Chỉ dẫn phạm vi lưu hành, phổ biến · <b>11b.</b> Chỉ dẫn dự thảo</li>
+        <li><b>12.</b> Ký hiệu người soạn thảo và số lượng bản phát hành · <b>13.</b> Thông tin liên hệ của cơ quan ban hành</li>
+        <li><b>14.</b> Chữ ký số của cơ quan trên bản sao sang văn bản điện tử · <b>15.</b> Chữ ký số của cá nhân trên bản sao sang văn bản điện tử</li></ul>`,
+                k: 'so do bo tri thanh phan the thuc phu luc 1 o so a4 le vi tri'
+              },
+            ]
+          },
+          {
+            name: 'Phụ lục 2 · Cỡ chữ và kiểu chữ từng thành phần', items: [
+              {
+                t: 'Thành phần đầu văn bản (mục 1-5)', s: 'Tiêu đề · cơ quan · số ký hiệu · địa danh · tên loại',
+                body: `<div class="tblwrap"><table class="tbl"><tr><th>Thành phần</th><th>Loại chữ</th><th>Cỡ</th><th>Kiểu chữ</th></tr>
+        <tr><td>Tiêu đề "Đảng Cộng sản Việt Nam"</td><td>In hoa</td><td>15</td><td>Đứng, đậm</td></tr>
+        <tr><td>Tên cơ quan cấp trên trực tiếp</td><td>In hoa</td><td>14</td><td>Đứng</td></tr>
+        <tr><td>Tên cơ quan ban hành văn bản</td><td>In hoa</td><td>14</td><td>Đứng, đậm</td></tr>
+        <tr><td>Số và ký hiệu văn bản</td><td>In thường</td><td>14</td><td>Đứng</td></tr>
+        <tr><td>Địa danh và ngày, tháng, năm</td><td>In thường</td><td>14</td><td>Nghiêng</td></tr>
+        <tr><td>Thể loại văn bản</td><td>In hoa</td><td>15-16</td><td>Đứng, đậm</td></tr>
+        <tr><td>Trích yếu nội dung văn bản</td><td>In thường</td><td>14-15</td><td>Đứng, đậm</td></tr>
+        <tr><td>Trích yếu nội dung công văn</td><td>In thường</td><td>12</td><td>Nghiêng</td></tr></table></div>`,
+                k: 'phu luc 2 tieu de co quan so ky hieu dia danh the loai trich yeu 15 14 15-16 14-15 12'
+              },
+              {
+                t: 'Nội dung và bố cục (mục 6)', s: 'Nội dung · Phần, Chương, Mục, Điều, Khoản, Điểm',
+                body: `<div class="tblwrap"><table class="tbl"><tr><th>Thành phần</th><th>Loại chữ</th><th>Cỡ</th><th>Kiểu chữ</th><th>Minh hoạ</th></tr>
+        <tr><td>Nội dung văn bản</td><td>In thường</td><td>14-15</td><td>Đứng</td><td>Trong công tác chỉ đạo...</td></tr>
+        <tr><td>Từ "Phần", "Chương" và số thứ tự</td><td>In thường</td><td>14-15</td><td>Đứng, đậm</td><td>Phần I; Chương II</td></tr>
+        <tr><td>Tên phần, chương</td><td>In hoa</td><td>14-15</td><td>Đứng, đậm</td><td>QUY ĐỊNH CHUNG</td></tr>
+        <tr><td>Từ "Mục" và số thứ tự</td><td>In thường</td><td>14-15</td><td>Đứng, đậm</td><td>Mục 1</td></tr>
+        <tr><td>Tên mục</td><td>In hoa</td><td>14-15</td><td>Đứng, đậm</td><td>QUẢN LÝ VĂN BẢN ĐI</td></tr>
+        <tr><td>Từ "Điều", số thứ tự và tên điều</td><td>In thường</td><td>14-15</td><td>Đứng, đậm</td><td>Điều 1. Phạm vi điều chỉnh…</td></tr>
+        <tr><td>Khoản</td><td>In thường</td><td>14-15</td><td>Đứng</td><td>1. Quy định về…</td></tr>
+        <tr><td>Điểm</td><td>In thường</td><td>14-15</td><td>Đứng</td><td>a) thể thức trình bày</td></tr></table></div>`,
+                k: 'phu luc 2 noi dung phan chuong muc dieu khoan diem 14-15'
+              },
+              {
+                t: 'Chữ ký, dấu, nơi nhận (mục 7-9)', s: 'Quyền hạn · chức vụ · họ tên · Kính gửi · Nơi nhận',
+                body: `<div class="tblwrap"><table class="tbl"><tr><th>Thành phần</th><th>Loại chữ</th><th>Cỡ</th><th>Kiểu chữ</th><th>Minh hoạ</th></tr>
+        <tr><td>Quyền hạn ký văn bản, bản sao</td><td>In hoa</td><td>14</td><td>Đứng, đậm</td><td>K/T GIÁM ĐỐC</td></tr>
+        <tr><td>Chức vụ người ký văn bản, bản sao</td><td>In hoa</td><td>14</td><td>Đứng</td><td>PHÓ GIÁM ĐỐC</td></tr>
+        <tr><td>Họ tên người ký văn bản, bản sao</td><td>In thường</td><td>14</td><td>Đứng, đậm</td><td>Nguyễn Văn A</td></tr>
+        <tr><td>Dấu tổ chức ban hành, sao văn bản</td><td colspan="3">—</td><td>Theo quy định của Ban Bí thư, hướng dẫn của Ban Tổ chức Trung ương và Bộ Công an</td></tr>
+        <tr><td>Từ "Kính gửi" (công văn), "Kính trình" (tờ trình)</td><td>In thường</td><td>14</td><td>Nghiêng</td><td>Kính gửi:</td></tr>
+        <tr><td>Tên tổ chức, cá nhân sau "Kính gửi", "Kính trình"</td><td>In thường</td><td>14</td><td>Đứng</td><td>- Ban Bí thư Trung ương;</td></tr>
+        <tr><td>Từ "Nơi nhận"</td><td>In thường</td><td>14</td><td>Đứng, gạch chân</td><td>Nơi nhận:</td></tr>
+        <tr><td>Tên tổ chức, cá nhân sau "Nơi nhận"</td><td>In thường</td><td>12</td><td>Đứng</td><td>- Ban Giám đốc Học viện;</td></tr></table></div>`,
+                k: 'phu luc 2 quyen han chuc vu ho ten dau kinh gui kinh trinh noi nhan gach chan 14 12'
+              },
+              {
+                t: 'Thành phần khác (mục 10-15)', s: 'Mật · khẩn · chỉ dẫn · người soạn · liên hệ · số trang',
+                body: `<div class="tblwrap"><table class="tbl"><tr><th>Thành phần</th><th>Loại chữ</th><th>Cỡ</th><th>Kiểu chữ</th><th>Minh hoạ</th></tr>
+        <tr><td>Dấu chỉ mức độ mật, thông tin văn bản mật</td><td colspan="3">—</td><td>Theo hướng dẫn của Bộ Công an</td></tr>
+        <tr><td>Dấu chỉ mức độ khẩn</td><td>In hoa</td><td>14</td><td>Đứng, đậm</td><td>KHẨN</td></tr>
+        <tr><td>Chỉ dẫn phạm vi lưu hành</td><td>In hoa</td><td>12</td><td>Đứng, đậm</td><td>TÀI LIỆU HỘI NGHỊ</td></tr>
+        <tr><td>Chỉ dẫn dự thảo văn bản</td><td>In thường</td><td>14</td><td>Nghiêng</td><td>Dự thảo lần 2</td></tr>
+        <tr><td>Ký hiệu người soạn thảo và số lượng bản phát hành</td><td>In thường</td><td>11</td><td>Đứng</td><td>NguyenVanAn-26</td></tr>
+        <tr><td>Thông tin liên hệ của cơ quan ban hành</td><td>In thường</td><td>10</td><td>Đứng</td><td>419, Hoàng Quốc Việt, Nghĩa Đô, Hà Nội; điện thoại: 024.62727100…</td></tr>
+        <tr><td>Số trang văn bản, phụ lục</td><td>In thường</td><td>14</td><td>Đứng</td><td>28</td></tr></table></div>`,
+                k: 'phu luc 2 mat khan tai lieu hoi nghi du thao ky hieu nguoi soan 11 lien he 10 so trang 14'
+              },
+            ]
+          },
+          {
+            name: 'Phụ lục 3 · Chữ viết tắt tên đơn vị', items: [
+              {
+                t: 'Danh mục chữ viết tắt 33 đơn vị', s: 'Khi soạn thảo (chủ trì soạn thảo) văn bản',
+                body: `<div class="tblwrap"><table class="tbl"><tr><th>STT</th><th>Tên đơn vị</th><th>Viết tắt</th></tr>
+        <tr><td>1</td><td>Học viện Chính trị quốc gia Hồ Chí Minh</td><td><span class="kbd">HVCTQGHCM</span></td></tr>
+        <tr><td>2</td><td>Vụ Tổ chức cán bộ</td><td><span class="kbd">VTCCB</span></td></tr>
+        <tr><td>3</td><td>Vụ Quản lý đào tạo, bồi dưỡng</td><td><span class="kbd">VQLĐTBD</span></td></tr>
+        <tr><td>4</td><td>Vụ Quản lý khoa học</td><td><span class="kbd">VQLKH</span></td></tr>
+        <tr><td>5</td><td>Vụ Các trường chính trị</td><td><span class="kbd">VCTCT</span></td></tr>
+        <tr><td>6</td><td>Vụ Hợp tác quốc tế</td><td><span class="kbd">VHTQT</span></td></tr>
+        <tr><td>7</td><td>Vụ Kế hoạch - Tài chính</td><td><span class="kbd">VKHTC</span></td></tr>
+        <tr><td>8</td><td>Trung tâm Công nghệ và Chuyển đổi số</td><td><span class="kbd">TTCNCĐS</span></td></tr>
+        <tr><td>9</td><td>Văn phòng Học viện</td><td><span class="kbd">VPHV</span></td></tr>
+        <tr><td>10</td><td>Ban Công tác Đảng – Đoàn thể</td><td><span class="kbd">BCTĐĐT</span></td></tr>
+        <tr><td>11</td><td>Ban Quản lý dự án xây dựng chuyên ngành</td><td><span class="kbd">BQLDAXDCN</span></td></tr>
+        <tr><td>12</td><td>Viện Triết học</td><td><span class="kbd">VTrH</span></td></tr>
+        <tr><td>13</td><td>Viện Kinh tế chính trị học</td><td><span class="kbd">VKTCTH</span></td></tr>
+        <tr><td>14</td><td>Viện Chủ nghĩa xã hội khoa học</td><td><span class="kbd">VCNXHKH</span></td></tr>
+        <tr><td>15</td><td>Viện Hồ Chí Minh và các lãnh tụ của Đảng</td><td><span class="kbd">VHCMLTCĐ</span></td></tr>
+        <tr><td>16</td><td>Viện Lịch sử Đảng</td><td><span class="kbd">VLSĐ</span></td></tr>
+        <tr><td>17</td><td>Viện Xây dựng Đảng</td><td><span class="kbd">VXDĐ</span></td></tr>
+        <tr><td>18</td><td>Viện Kinh tế - Xã hội và Môi trường</td><td><span class="kbd">VKTXHMT</span></td></tr>
+        <tr><td>19</td><td>Viện Chính trị và Quan hệ quốc tế</td><td><span class="kbd">VCTQHQT</span></td></tr>
+        <tr><td>20</td><td>Viện Nhà nước và Pháp luật</td><td><span class="kbd">VNNPL</span></td></tr>
+        <tr><td>21</td><td>Viện Quyền con người</td><td><span class="kbd">VQCN</span></td></tr>
+        <tr><td>22</td><td>Viện Văn hóa và Phát triển</td><td><span class="kbd">VVHPT</span></td></tr>
+        <tr><td>23</td><td>Viện Lãnh đạo học và Hành chính công</td><td><span class="kbd">VLĐHHCC</span></td></tr>
+        <tr><td>24</td><td>Viện Dân tộc và Tôn giáo</td><td><span class="kbd">VDTTG</span></td></tr>
+        <tr><td>25</td><td>Viện Thông tin khoa học</td><td><span class="kbd">VTTKH</span></td></tr>
+        <tr><td>26</td><td>Tạp chí Lý luận chính trị</td><td><span class="kbd">VTCLLCT</span></td></tr>
+        <tr><td>27</td><td>Nhà xuất bản Lý luận chính trị</td><td><span class="kbd">VNXBLLCT</span></td></tr>
+        <tr><td>28</td><td>Học viện Chính trị khu vực I</td><td><span class="kbd">HVCTKVI</span></td></tr>
+        <tr><td>29</td><td>Học viện Chính trị khu vực II</td><td><span class="kbd">HVCTKVII</span></td></tr>
+        <tr><td>30</td><td>Học viện Chính trị khu vực III</td><td><span class="kbd">HVCTKVIII</span></td></tr>
+        <tr><td>31</td><td>Học viện Chính trị khu vực IV</td><td><span class="kbd">HVCTKVIV</span></td></tr>
+        <tr><td>32</td><td>Học viện Báo chí và Tuyên truyền</td><td><span class="kbd">HVBCTT</span></td></tr>
+        <tr><td>33</td><td>Học viện Hành chính và Quản trị công</td><td><span class="kbd">HVHCQTC</span></td></tr></table></div>
+        <p>Các đơn vị trên khi thay đổi tên và các đơn vị khác trong hệ thống Học viện căn cứ Hướng dẫn này để quy định chữ viết tắt tên cơ quan, đơn vị khi soạn thảo văn bản.</p>`,
+                k: 'phu luc 3 chu viet tat don vi hvctqghcm vtccb vqldtbd vqlkh vctct vhtqt vkhtc ttcncds vphv bctddt bqldaxdcn vtrh vktcth vcnxhkh vhcmltcd vlsd vxdd vktxhmt vctqhqt vnnpl vqcn vvhpt vldhhcc vdttg vttkh vtcllct vnxbllct hvctkvi hvctkvii hvctkviii hvctkviv hvbctt hvhcqtc vien vu hoc vien khu vuc'
+              },
+            ]
+          },
+          {
+            name: 'Phụ lục 4 · Mẫu văn bản thông dụng', items: [
+              {
+                t: 'Danh mục 10 mẫu văn bản', s: 'CV · TTr · TB · GM · QĐ · QC · KH · BC',
+                body: `<div class="tblwrap"><table class="tbl"><tr><th>Mẫu</th><th>Loại văn bản</th><th>Ký hiệu</th></tr>
+        <tr><td>Mẫu 1</td><td>Công văn</td><td><span class="kbd">CV</span></td></tr>
+        <tr><td>Mẫu 2</td><td>Tờ trình</td><td><span class="kbd">TTr</span></td></tr>
+        <tr><td>Mẫu 3</td><td>Thông báo</td><td><span class="kbd">TB</span></td></tr>
+        <tr><td>Mẫu 4</td><td>Giấy mời</td><td><span class="kbd">GM</span></td></tr>
+        <tr><td>Mẫu 5</td><td>Quyết định</td><td><span class="kbd">QĐ</span></td></tr>
+        <tr><td>Mẫu 5.1</td><td>Văn bản kèm theo Quyết định</td><td>—</td></tr>
+        <tr><td>Mẫu 6</td><td>Quy chế</td><td><span class="kbd">QC</span></td></tr>
+        <tr><td>Mẫu 7</td><td>Quy định</td><td><span class="kbd">QĐ</span></td></tr>
+        <tr><td>Mẫu 8</td><td>Kế hoạch</td><td><span class="kbd">KH</span></td></tr>
+        <tr><td>Mẫu 9</td><td>Báo cáo</td><td><span class="kbd">BC</span></td></tr></table></div>
+        <p>Ghi chú các mẫu thống nhất quy cách tại Phụ lục 2. Điểm riêng:</p>
+        <ul><li><b>Giấy mời</b>: cuối trang có dòng "Thông tin chi tiết xin liên hệ: Đồng chí…, …(chức vụ)…, Số điện thoại:…" — in thường, đứng, cỡ 10.</li>
+        <li><b>Báo cáo</b>: có thể kèm chỉ dẫn phạm vi lưu hành "TÀI LIỆU HỘI NGHỊ" — in hoa, đứng, đậm, cỡ 12.</li>
+        <li><b>Văn bản kèm theo Quyết định</b>: tiêu đề tóm tắt nội dung + dòng "(Ban hành kèm theo Quyết định số …-QĐ/HVCTQGHCM ngày … của Giám đốc Học viện)" + 05 dấu gạch nối.</li>
+        <li><b>Quyết định</b>: phần căn cứ kết bằng "Xét đề nghị của…," rồi đến "GIÁM ĐỐC HỌC VIỆN QUYẾT ĐỊNH" và các Điều.</li></ul>`,
+                k: 'phu luc 4 mau van ban cong van to trinh thong bao giay moi quyet dinh quy che quy dinh ke hoach bao cao cv ttr tb gm qd qc kh bc'
+              },
+            ]
+          },
+        ]
+      },
+    };
+
+    /* ---------- RENDER ---------- */
+    const main = document.getElementById('main');
+    const tabsEl = document.getElementById('tabs');
+    const qEl = document.getElementById('q');
+    const clearEl = document.getElementById('clear');
+    let current = 'thethuc', query = '';
+
+    function norm(s) {
+      return (s || '').toLowerCase()
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd');
+    }
+
+    function hl(text, q) {
+      if (!q) return text;
+      const nq = norm(q), nt = norm(text);
+      const i = nt.indexOf(nq);
+      if (i < 0) return text;
+      return text.slice(0, i) + '<mark>' + text.slice(i, i + q.length) + '</mark>' + text.slice(i + q.length);
+    }
+
+    function render() {
+      const d = DATA[current];
+      const nq = norm(query.trim());
+      let html = '';
+      html += '<div class="meta">' + d.meta.map((m, i) => '<span class="chip' + (i ? ' gray' : '') + '">' + m + '</span>').join('') + '</div>';
+      let shown = 0;
+      d.groups.forEach(g => {
+        const matched = g.items.filter(it => {
+          if (!nq) return true;
+          return norm(it.t + ' ' + it.s + ' ' + (it.k || '') + ' ' + it.body).includes(nq);
+        });
+        if (!matched.length) return;
+        html += '<div class="grouphead">' + g.name + '</div>';
+        matched.forEach(it => {
+          shown++;
+          const open = nq ? ' open' : '';
+          html += '<div class="card' + open + '">'
+            + '<button class="head" type="button">'
+            + (it.n ? '<span class="num">' + it.n + '</span>' : '')
+            + '<span class="htext"><span class="t">' + hl(it.t, query.trim()) + '</span>'
+            + '<span class="s">' + hl(it.s, query.trim()) + '</span></span>'
+            + '<svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>'
+            + '</button>'
+            + '<div class="body">' + it.body + '</div>'
+            + '</div>';
+        });
+      });
+      if (!shown) {
+        html += '<div class="empty"><b>Không tìm thấy</b>Thử từ khoá khác, ví dụ: <i>định lề, ký hiệu, cỡ chữ, nơi nhận</i>.</div>';
+      }
+      main.innerHTML = html;
+      main.querySelectorAll('.card').forEach(c => {
+        c.querySelector('.head').addEventListener('click', () => c.classList.toggle('open'));
+      });
+    }
+
+    tabsEl.addEventListener('click', e => {
+      const b = e.target.closest('.tab'); if (!b) return;
+      current = b.dataset.tab;
+      tabsEl.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t === b));
+      window.scrollTo({ top: 0 });
+      render();
+    });
+    qEl.addEventListener('input', () => {
+      query = qEl.value;
+      clearEl.classList.toggle('show', !!query);
+      render();
+    });
+    clearEl.addEventListener('click', () => { query = ''; qEl.value = ''; clearEl.classList.remove('show'); qEl.focus(); render(); });
+
+    render();
+  </script>
+
+  <div class="wrap">
+    <div class="footer">
+      Tóm tắt từ Hướng dẫn 986-HD/HVCTQGHCM (14/7/2026) — thay thế HD 488-HD/HVCTQG (18/10/2018).<br>
+      Đây là bản tra cứu nhanh — khi soạn thảo chính thức cần đối chiếu nguyên văn.
+    </div>
+  </div>
+
+</body>
+
+</html>
